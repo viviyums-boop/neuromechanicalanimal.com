@@ -40,17 +40,17 @@
             border-bottom: 2px solid var(--gold-accent);
             display: flex;
             justify-content: center;
-            gap: 15px;
         }
 
         .nav-btn {
             color: var(--gold-glow);
             text-decoration: none;
             border: 1px solid var(--gold-accent);
-            padding: 8px 18px;
-            font-size: 0.85rem;
+            padding: 10px 24px;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            font-weight: bold;
             transition: all 0.3s ease;
         }
 
@@ -119,6 +119,16 @@
             padding-bottom: 5px;
         }
 
+        h3 {
+            font-size: 1.25rem;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #1a1510;
+        }
+
         p {
             margin-bottom: 18px;
             font-size: 1.05rem;
@@ -130,7 +140,7 @@
             max-width: 300px;
             height: auto;
             opacity: 0.85;
-            mix-blend-mode: multiply; /* Blends sketch background layers cleanly into the solid golden parchment color */
+            mix-blend-mode: multiply;
         }
 
         /* Dark High-Contrast Practitioner Block */
@@ -255,16 +265,22 @@
             letter-spacing: 1px;
         }
 
-        /* Rates & FAQ Formatting */
+        /* Rates Formatting */
         .rates-list {
             list-style: none;
-            margin: 20px 0 35px 0;
+            margin: 15px 0 30px 0;
         }
 
         .rates-list li {
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px dashed var(--border-ink);
             font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .rates-list li span {
+            font-weight: bold;
         }
 
         .faq-block {
@@ -300,21 +316,21 @@
 <body>
 
     <div class="top-nav">
-        <a href="#" class="nav-btn">Book Intro Session — $175</a>
-        <a href="#" class="nav-btn">Book Follow-Up — $125</a>
+        <a href="#" class="nav-btn">Book a Session with Me</a>
     </div>
 
     <div class="main-wrapper">
         
         <header>
             <h1>The Neuro-Mechanical Animal</h1>
-            <div class="subtitle">Somatic Healing & Nervous System Regulation</div>
+            <div class="subtitle">Somatic Healing & Autonomic Nervous System Regulation</div>
         </header>
 
         <section class="content-layout">
             <div>
-                <h2>The Neuro-Mechanical Animal</h2>
-                <p>Welcome to <strong>The Neuro-Mechanical Animal</strong>. Within this healing structure, we recognize that the creative animal (you) is intricately guided through neuro-mechanical means. Everything we think, feel, and create is an ongoing dialogue between the brain working in tandem with the physical body.</p>
+                <h2>The Neuro-Mechanical Framework</h2>
+                <p>Welcome to <strong>The Neuro-Mechanical Animal</strong>. Within this therapeutic architecture, we honor a foundational truth: the creative animal (you) is completely mediated through neuro-mechanical pathways. Every abstract thought, complex emotion, and artistic expression exists as a bi-directional dialogue between the brain and the physical framework of the body.</p>
+                <p>When our physiological architecture is clear, energy moves fluidly. When it becomes stuck, our capacity for creativity, presence, and vitality standardizes into defensive, survival-driven loops.</p>
             </div>
             <div class="sketch-side">
                 <img src="https://i.imghippo.com/files/zCbt4014W.jpg" alt="Leonardo da Vinci - Structural heart mechanics study">
@@ -323,9 +339,9 @@
 
         <section class="content-layout">
             <div>
-                <h2>What is Somatic Healing?</h2>
-                <p>In times of trauma and chronic stress, we naturally lose touch with our physical selves. When forced into states of fight, flight, or survival mode, our nervous system becomes dysregulated. Over time, this manifests as shallow breathing, physical tension, and deeply grooved physical holding patterns that we don't know how to break free from.</p>
-                <p>Somatic healing is the deliberate re-establishment of the connection between the mind and the body. By working with physiological patterns directly, we address somatic dissociation—the feeling of being detached or floating away from yourself—and safely reattach the brain's processing to the body's lived experience.</p>
+                <h2>Nervous System Regulation & Somatic Practice</h2>
+                <p>Trauma, structural injuries, and chronic environmental stress fundamentally disrupt the autonomic nervous system. Forced into sustained states of sympathetic charge (fight/flight) or dorsal vagal shutdown (freeze), our biology defaults into systemic dysregulation. This state manifests as shallow breathing patterns, localized tissue bracing, myofascial constriction, and deeply grooved physical holding habits.</p>
+                <p>Somatic healing is the deliberate, evidence-based process of restoring autonomic regulation. By addressing somatic dissociation—the protective state where the brain detaches from physical feedback loops—we carefully re-establish somatic mapping. Through targeted movement, mechanical awareness, and sensory tracking, we shift the biology out of survival defaults back into safety and neurological baseline stability.</p>
             </div>
             <div class="sketch-side">
                 <img src="https://i.imghippo.com/files/dv8251ows.jpg" alt="Leonardo da Vinci - Skeleton and head bone study">
@@ -339,22 +355,40 @@
             <div class="practitioner-info">
                 <h2>About the Practitioner</h2>
                 <div class="meta-tags">
-                    Vivian Mitchell, APCC #16067 | Advanced Clinical Psychology Practitioner & Practicing Therapist<br>
-                    Virtual Sessions (California)
+                    Vivian Mitchell, APCC #16067 | Advanced Clinical Psychology Practitioner & Somatic Specialist<br>
+                    Virtual Practice (California Admissions Only)
                 </div>
-                <p>My journey in psychological work spans over a decade, completing a full circle from my early foundations as a university tutor in biological psychology to deep research in social psychology and cognitive development. As a published researcher, I have worked across a diverse array of social services and mental healthcare settings.</p>
-                <p>In my practice, I specialize in ADHD, Autism, LGBTQI+ support, and dissociative disorders. Lately, my focus has shifted heavily toward somatic healing because I have seen firsthand what complex trauma does to the body.</p>
+                <p>My work in psychological mechanics spans over a decade, traveling full circle from academic foundations as a biological psychology instructor to extensive peer-reviewed research in social psychology and cognitive development. As a published researcher, I have worked across complex social service systems and mental healthcare environments.</p>
+                <p>In clinical practice, I specialize in neurodivergence (ADHD, Autism spectrum architecture), LGBTQI+ advocacy, dissociative conditions, and complex trauma. Witnessing how chronic stress embeds itself into human physiology led me to specialize deeply in autonomic nervous system regulation, helping clients reconstruct biological safety within their own bodies.</p>
                 
                 <div class="contact-buttons">
-                    <a href="mailto:vivianmorganmitchell@gmail.com" class="btn-outline">Email Vivian</a>
-                    <a href="#" class="btn-outline">Client Portal</a>
+                    <a href="mailto:vivianmorganmitchell@gmail.com" class="btn-outline">Email Inquiries</a>
+                    <a href="#" class="btn-outline">SimplePractice Portal</a>
                 </div>
             </div>
         </section>
 
-        <section style="margin-top: 60px;">
-            <h2>Digital Guides & Manuals</h2>
-            <p>Self-paced regulatory tools grounded in biological mechanics to support your daily practice.</p>
+        <section style="margin-top: 50px;">
+            <h2>About the Practice: Tiers & Offers</h2>
+            <p>Sessions are held virtually and structured according to your specific autonomic architecture and regulation goals.</p>
+            
+            <h3>1. Somatic Healing & Autonomic Regulation</h3>
+            <p>Deep, trauma-informed clinical coaching focused on tracking physiological holding patterns, resolving somatic dissociation, and re-establishing safe baseline nervous system regulation.</p>
+            <ul class="rates-list">
+                <li>Initial Intake & Assessment Session (Biological Background Mapping) <span>$175</span></li>
+                <li>Subsequent Individual Regulation Sessions <span>$125</span></li>
+                <li>Somatic Regulation Package (5 Scheduled Sessions) <span>$500</span></li>
+            </ul>
+
+            <h3>2. Enteric Regulation & Digestive Vitality Coaching</h3>
+            <p>A specialized, targeted coaching tier focusing on the gut-brain axis, calming the enteric nervous system, and structuring metabolic digestive sequencing to optimize cellular energy and lower systemic inflammation.</p>
+            <ul class="rates-list">
+                <li>Individual Enteric Regulation & Vitality Session <span>$95</span></li>
+                <li>Digestive Vitality 4-Session Track <span>$340</span></li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">3. Self-Paced Digital Manuals</h3>
+            <p>Biological blueprints grounded in metabolic mechanics to support your daily independent regulation practice.</p>
             
             <div class="offers-grid">
                 <div class="guide-card">
@@ -386,38 +420,28 @@
             </div>
         </section>
 
-        <section style="margin-top: 50px;">
-            <h2>Somatic Healing Sessions</h2>
-            <p>Work directly with me through virtual somatic healing sessions tailored to your nervous system architecture.</p>
-            <ul class="rates-list">
-                <li><strong>Initial Intake & Assessment Session:</strong> $175</li>
-                <li><strong>Subsequent Individual Sessions:</strong> $125</li>
-                <li><strong>Somatic Package (5 Sessions):</strong> $500</li>
-            </ul>
-        </section>
-
         <section class="content-layout faq-block">
             <div>
                 <h2>Answers to Common Questions</h2>
                 
                 <div class="faq-item">
-                    <div class="faq-q">How is somatic healing different from traditional psychotherapy?</div>
+                    <div class="faq-q">How is somatic nervous system regulation different from traditional talk therapy?</div>
                     <div class="faq-a">
-                        <p>Traditional psychotherapy heavily emphasizes cognitive processing, verbal narrative, clinical pathology, and diagnostic frameworks. Somatic healing focuses directly on structural bodywork and physiological state regulation. Rather than just talking through an experience, we work directly on the body's physical integration of stress and dissociation, physically reattaching the mind to real-time physical feedback.</p>
+                        <p>Traditional psychotherapy heavily prioritizes top-down cognitive processing, verbal narratives, and diagnostic insight. Somatic regulation utilizes a bottom-up framework. We prioritize structural patterns and physiological states directly. Rather than intellectualizing an experience, we work to alter the body's physical integration of defensive stress states, actively retraining the nervous system to process real-time safety signals.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-q">Do you accept insurance?</div>
                     <div class="faq-a">
-                        <p>No, insurance is not accepted for somatic healing services. If you are located within the state of California and strictly require formal mental health psychotherapy, you are welcome to reach out to me directly to discuss traditional therapeutic care pathways under my APCC registration.</p>
+                        <p>No, commercial health insurance is not accepted for somatic coaching or enteric vitality services. If you reside in California and explicitly require formal mental health psychotherapy under standard diagnostic guidelines, you may contact me directly to discuss therapeutic care pathways via my APCC clinical registration.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-q">What should I expect from the initial sessions?</div>
+                    <div class="faq-q">What should I expect from my initial somatic mapping session?</div>
                     <div class="faq-a">
-                        <p>True physiological changes take time; we generally recommend a baseline commitment of at least five sessions to begin shifting deeply grooved somatic holding patterns. Your initial intake session is dedicated to gathering your unique developmental history and physiological background. From there, you will receive tailored somatic recommendations, digital guides, and introductory movement or breathing exercises to begin tracking your nervous system independently.</p>
+                        <p>autonomic baseline restructuring requires consistency; we highly recommend a baseline commitment of five sessions to shift deeply grooved physiological responses. Your intake session maps your unique developmental background and somatic tracking capacity. From there, you will receive tailored somatic exercises, breathing alignment protocols, and access to relevant digital tools to begin independent nervous system tracking.</p>
                     </div>
                 </div>
             </div>
