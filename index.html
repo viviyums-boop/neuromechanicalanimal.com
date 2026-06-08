@@ -1,1519 +1,198 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cindness KULT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>The Neuro-Mechanical Animal | Somatic Healing</title>
     <style>
-        /* --- Base Styles & Colors --- */
+        /* Da Vinci & Low Blue Light Structural Aesthetic */
         :root {
-            --purple: #9b59b6;
-            --blue: #3498db;
-            --green: #2ecc71;
-            --dark-bg: #0d0f1a;
-            --light-text: #ecf0f1;
-            --glow-color: rgba(52, 152, 219, 0.7);
+            --bg-parchment: #eedfc4;       /* Solid golden parchment paper color */
+            --bg-dark-block: #1e1a15;     /* Structural charcoal contrast for profile */
+            --text-dark: #2c2217;         /* Deep sepia ink for optimal parchment reading */
+            --text-light: #f5edd7;        /* Soft antique text for the dark block */
+            --gold-accent: #b8860b;       /* Renaissance raw amber/gold */
+            --gold-glow: #e5c158;         /* Glowing accent gold */
+            --border-ink: #8a765d;        /* Sketch-like structural border lines */
         }
 
-        /* --- Twinkling Cursor & Background --- */
-        html {
-            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12,0L9.9,8.1L0,9.9l8.1,2.1l2.1,8.1l2.1-8.1l8.1-2.1L14.1,8.1L12,0z" transform="rotate(0 12 12)"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="2s" repeatCount="indefinite"/></animateTransform></path></svg>') 12 12, auto;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            background-color: var(--dark-bg);
-            background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            font-family: 'Source Serif Pro', serif;
-            color: var(--light-text);
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            line-height: 1.7;
-            overflow-x: hidden;
+            background-color: var(--bg-parchment);
+            color: var(--text-dark);
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
         }
 
-        /* --- Main Container & Layout --- */
-        .container {
-            max-width: 700px;
-            width: 100%;
+        /* Top Floating Booking Banner */
+        .top-nav {
+            background-color: #1a1510;
+            padding: 12px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--gold-accent);
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav-btn {
+            color: var(--gold-glow);
+            text-decoration: none;
+            border: 1px solid var(--gold-accent);
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--gold-accent);
+            color: #1a1510;
+        }
+
+        .main-wrapper {
+            max-width: 950px;
             margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header Style */
+        header {
             text-align: center;
-            position: relative;
-            z-index: 1;
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            border-bottom: 1px double var(--border-ink);
         }
 
-        /* --- NEW: Visitor Counter at Top --- */
-        .visitor-counter-top {
-            text-align: center;
-            margin-bottom: 20px;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1rem;
-            color: var(--blue);
+        h1 {
+            font-size: 2.8rem;
+            font-weight: normal;
+            letter-spacing: 1px;
+            color: #1a1510;
+            margin-bottom: 5px;
         }
 
-        /* --- General Section Styling --- */
-        .section {
-            background-color: rgba(13, 15, 26, 0.92);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border: 1px solid rgba(52, 152, 219, 0.2);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
-            text-align: left;
-            transition: all 0.4s ease;
+        .subtitle {
+            font-style: italic;
+            color: #5c4a37;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        /* NEW: Hover effect for sections */
-        .section:hover {
-            border-color: rgba(52, 152, 219, 0.5);
-            box-shadow: 0 0 25px rgba(52, 152, 219, 0.2);
+        /* Multi-column Grid for Sketches and Narrative */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
         }
 
-        /* --- Gradient Text for Titles --- */
-        .gradient-text {
-            background: linear-gradient(90deg, var(--purple), var(--blue), var(--green));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-            animation: gradient-animation-text 5s linear infinite;
-        }
-        @keyframes gradient-animation-text {
-            to {
-                background-position: 200% center;
+        @media (max-width: 768px) {
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+            .sketch-side {
+                order: -1;
+                margin: 0 auto;
             }
         }
 
-        /* Specific styling for section headers */
         h2 {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.8rem;
-            color: var(--purple);
-            margin-top: 0;
+            font-size: 1.6rem;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             margin-bottom: 20px;
-            text-align: left;
-            padding-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid rgba(52, 152, 219, 0.3);
-        }
-
-        h3 {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.4rem;
-            color: #ffffff;
-            margin-top: 25px;
-            text-align: center;
-        }
-
-        h4 {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.1rem;
-            color: var(--blue);
-            margin-top: 20px;
-            margin-bottom: 15px;
-            text-align: center;
+            color: #1a1510;
+            border-bottom: 1px solid var(--border-ink);
+            padding-bottom: 5px;
         }
 
         p {
-            font-family: 'Source Serif Pro', serif;
-            font-size: 1.1rem;
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            text-align: justify;
         }
 
-        .problem-bold {
-            font-family: 'Press Start 2P', cursive;
-        }
-
-        /* --- Header Section (Now part of the dashboard) --- */
-        .main-header {
-            padding: 20px;
-            margin-bottom: 0;
-        }
-        .title {
-            font-family: 'Press Start 2P', cursive;
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            font-family: 'Source Serif Pro', serif;
-            font-size: 1.1rem;
-            color: #bdc3c7;
-            margin-bottom: 0;
-        }
-
-        /* --- UPDATED: Dashboard Banner (was stats-bar) --- */
-        .dashboard-banner {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: rgba(13, 15, 26, 0.92);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(52, 152, 219, 0.2);
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 40px;
-        }
-
-        .dashboard-banner .header-content {
-            text-align: center;
-            flex-grow: 0;
-        }
-
-        /* --- NEW: Top Bar for Clock --- */
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        #circular-clock {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 3px solid var(--green);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1rem;
-            color: var(--green);
-            background-color: rgba(13, 15, 26, 0.5);
-            box-shadow: 0 0 15px rgba(46, 204, 113, 0.3), inset 0 0 10px rgba(46, 204, 113, 0.2);
-        }
-
-        /* --- NEW: Navigation Dropdown --- */
-        .banner-nav {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-btn {
-            background-color: transparent;
-            color: var(--blue);
-            padding: 12px;
-            font-size: 1.5rem;
-            border: 2px solid var(--blue);
-            border-radius: 50%;
-            cursor: pointer;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        .dropdown-btn:hover {
-            background-color: var(--blue);
-            color: var(--dark-bg);
-            box-shadow: 0 0 15px var(--glow-color);
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: var(--dark-bg);
-            border: 1px solid rgba(52, 152, 219, 0.3);
-            min-width: 240px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
-            z-index: 100;
-            border-radius: 12px;
-            padding: 10px 0;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-        }
-        .dropdown-content a {
-            color: var(--light-text);
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-            font-family: 'Source Serif Pro', serif;
-            transition: background-color 0.2s;
-        }
-        .dropdown-content a:hover {
-            background-color: rgba(52, 152, 219, 0.2);
-        }
-        .dropdown-content hr {
-            border: none;
-            height: 1px;
-            background-color: rgba(52, 152, 219, 0.2);
-            margin: 8px 0;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* --- Simple Nav Links --- */
-        .simple-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px;
-        }
-        .simple-nav a {
-            color: #bdc3c7;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.2s;
-        }
-        .simple-nav a:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-        .contact-button {
-            background: linear-gradient(135deg, var(--green), var(--blue));
-            border: none;
-            border-radius: 8px;
-            padding: 10px 25px;
-            color: #ffffff;
-            font-family: 'Source Serif Pro', serif;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        .contact-button:hover {
-            transform: scale(1.05);
-            box-shadow: 4px 4px 15px rgba(0,0,0,0.3);
-        }
-
-        /* --- Resource Hub Portal Buttons (new card design with glowing border) --- */
-        .link-pool {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .link-pool li a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .sketch-side img {
             width: 100%;
             max-width: 300px;
-            height: 60px;
-            padding: 10px;
-            position: relative;
-            background-color: var(--dark-bg);
-            text-decoration: none;
-            font-weight: 600;
-            color: var(--light-text);
-            text-align: center;
-            transition: all 0.3s ease;
-            border-radius: 12px;
-            background-clip: padding-box;
-            border: 2px solid transparent;
-            box-shadow: inset 0 0 0 1px rgba(52, 152, 219, 0.2);
-        }
-
-        .link-pool li a:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-            border-image: linear-gradient(135deg, var(--purple), var(--blue), var(--green)) 1;
-        }
-
-        /* --- UPDATED: Attention-grabbing button styles --- */
-        .attention-button {
-            width: 100%;
-            height: 90px;
-            font-size: 1.2rem;
-            font-family: 'Press Start 2P', cursive;
-            background: linear-gradient(135deg, var(--blue), var(--green));
-            border: none;
-            border-radius: 9999px;
-            color: white;
-            animation: pulse-glow 3s infinite alternate;
-        }
-
-        .attention-button-li {
-            width: 100%;
-        }
-
-        .attention-button:hover {
-            background: linear-gradient(135deg, var(--green), var(--blue));
-        }
-
-        @keyframes pulse-glow {
-            from {
-                box-shadow: 0 0 10px rgba(52, 152, 219, 0.4), 0 0 20px rgba(46, 204, 113, 0.4);
-            }
-            to {
-                box-shadow: 0 0 20px rgba(52, 152, 219, 0.8), 0 0 35px rgba(46, 204, 113, 0.8);
-            }
-        }
-
-        /* --- New Glitch Button Styles --- */
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
-        }
-        .glitch-button {
-            position: relative;
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #000000;
-            color: #00ff00;
-            font-family: "Press Start 2P", monospace;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            border: 3px solid #00ff00;
-            box-shadow: 4px 4px #ff00ff;
-            transition: background-color 0.3s, box-shadow 0.3s;
-            overflow: hidden;
-        }
-        .glitch-button:hover {
-            background-color: #333333;
-            box-shadow: 6px 6px #ff00ff;
-        }
-        .glitch-button:hover .glitch-text {
-            animation: glitch 0.5s infinite linear;
-        }
-        .glitch-text {
-            position: relative;
-            z-index: 1;
-            display: inline-block;
-        }
-
-        /* --- Footer --- */
-        footer {
-            margin-top: 60px;
-            font-size: 0.9rem;
-            color: #7f8c8d;
-        }
-
-        /* --- New Styling for Profile Card --- */
-        .profile-card {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-bottom: 20px;
-            gap: 20px;
-            justify-content: center;
-        }
-        .profile-card img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--blue);
-            box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
-        }
-        .profile-card .name-title {
-            font-family: 'Source Serif Pro', serif;
-            font-size: 1.2rem;
-            color: var(--light-text);
-            line-height: 1.4;
-            text-align: left;
-        }
-
-        /* New Styling for the Self-Compassion Flyer */
-        .flyer-container {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .flyer-container img {
-            max-width: 100%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease;
-        }
-        .flyer-container img:hover {
-            transform: scale(1.02);
+            opacity: 0.85;
+            mix-blend-mode: multiply; /* Blends sketch background layers cleanly into the solid golden parchment color */
         }
 
-        @media (max-width: 680px) {
-            .dashboard-banner {
-                flex-direction: column;
-                align-items: center;
-            }
-            .dashboard-banner .header-content {
+        /* Dark High-Contrast Practitioner Block */
+        .practitioner-block {
+            background-color: var(--bg-dark-block);
+            color: var(--text-light);
+            padding: 40px;
+            margin: 40px -20px;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 35px;
+            border-top: 3px solid var(--gold-accent);
+            border-bottom: 3px solid var(--gold-accent);
+        }
+
+        @media (max-width: 650px) {
+            .practitioner-block {
+                grid-template-columns: 1fr;
                 text-align: center;
             }
-        }
-
-        @media (max-width: 480px) {
-            .link-pool li a {
-                width: 100%;
-                font-size: 0.9rem;
+            .photo-frame {
+                margin: 0 auto;
             }
         }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 350px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 400px;
-            }
-        }
-        .authenticity-diagram {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .core-self {
-            width: 120px;
-            height: 120px;
-            background-color: #27AE60;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            font-weight: bold;
-            z-index: 10;
-        }
-        .action-node {
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            background-color: #2980B9;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 0.8rem;
-            line-height: 1.2;
-        }
-        .action-node-1 { transform: translate(-110px, -80px); }
-        .action-node-2 { transform: translate(110px, -80px); }
-        .action-node-3 { transform: translate(0, 130px); }
 
-        /* Custom styling for the new content sections to match the theme */
-        .content-card {
-            background-color: var(--dark-bg);
-            border: 1px solid rgba(52, 152, 219, 0.2);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 0 25px rgba(52, 152, 219, 0.1);
-        }
-        .content-card h3 {
-            font-family: 'Press Start 2P', cursive;
-            color: var(--light-text);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            text-align: left;
-        }
-        .content-card p {
-            color: var(--light-text);
-            font-family: 'Source Serif Pro', serif;
-            font-size: 1.1rem;
-        }
-        .content-card strong {
-            color: var(--purple);
-        }
-        .content-card .text-gray-500, .content-card .text-gray-400 {
-            color: var(--light-text);
-            opacity: 0.7;
+        .photo-frame {
+            width: 220px;
+            height: 290px;
+            border: 2px solid var(--gold-glow);
+            box-shadow: 0 0 15px rgba(229, 193, 88, 0.2);
+            overflow: hidden;
+            background-color: #110e0b;
         }
 
-        /* --- NEW: Mailchimp Form Styles --- */
-        #mc_embed_signup {
-            background: transparent;
+        .photo-frame img {
             width: 100%;
-            font-family: 'Source Serif Pro', serif;
-            color: var(--light-text);
-        }
-        #mc_embed_signup h2 {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.2rem;
-            color: var(--light-text);
-            border-bottom: none;
-            text-align: center;
-        }
-        #mc_embed_signup .mc-field-group {
-            width: 100%;
-            padding-bottom: 1.5rem;
-        }
-        #mc_embed_signup .mc-field-group label {
-            color: var(--light-text);
-            font-family: 'Source Serif Pro', serif;
-            margin-bottom: 0.5rem;
-        }
-        #mc_embed_signup .mc-field-group input {
-            background-color: rgba(13, 15, 26, 0.8);
-            border: 1px solid rgba(52, 152, 219, 0.3);
-            border-radius: 8px;
-            color: var(--light-text);
-            padding: 12px;
-            width: 100%;
-            transition: all 0.3s ease;
-        }
-        #mc_embed_signup .mc-field-group input:focus {
-            outline: none;
-            border-color: var(--blue);
-            box-shadow: 0 0 15px var(--glow-color);
-        }
-        #mc_embed_signup .indicates-required {
-            color: rgba(236, 240, 241, 0.5);
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        #mc_embed_signup .button {
-            background: linear-gradient(135deg, var(--green), var(--blue));
-            border: none;
-            border-radius: 8px;
-            padding: 12px 25px;
-            color: #ffffff;
-            font-family: 'Source Serif Pro', serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.2s ease;
-        }
-        #mc_embed_signup .button:hover {
-            transform: scale(1.03);
-            box-shadow: 4px 4px 15px rgba(0,0,0,0.3);
-        }
-        #mc_embed_signup .refferal_badge {
-            display: none !important;
-        }
-
-        /* --- NEW: TASK MANAGER STYLES --- */
-        .task-manager-body {
-            font-family: 'Source Serif Pro', serif;
-            color: var(--light-text);
-        }
-        .task-card {
-            transition: all 0.3s ease-in-out;
-            display: flex;
-            flex-direction: column;
             height: 100%;
-            background-color: rgba(13, 15, 26, 0.8);
-            border: 1px solid rgba(52, 152, 219, 0.3);
-            position: relative;
+            object-fit: cover;
         }
-        .task-card.completed {
-            background-color: rgba(13, 15, 26, 0.5);
-            transform: scale(0.98);
+
+        .practitioner-info h2 {
+            color: var(--gold-glow);
+            border-bottom: 1px solid #4a3e31;
         }
-        .task-card.completed h3,
-        .task-card.completed p,
-        .task-card.completed .pinch-motivator {
-            text-decoration: line-through;
-            color: #6b7280;
+
+        .practitioner-info p {
+            color: var(--text-light);
         }
-        .task-manager-chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 250px;
-            height: 250px;
-            margin-left: auto;
-            margin-right: auto;
+
+        .meta-tags {
+            font-size: 0.9rem;
+            color: var(--gold-glow);
+            margin-bottom: 15px;
+            font-style: italic;
         }
-        .modal-backdrop {
-            transition: opacity 0.3s ease-in-out;
-        }
-        .sub-steps-list li {
+
+        .contact-buttons {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.5rem;
-            padding: 0.25rem 0;
-            border-bottom: 1px solid rgba(52, 152, 219, 0.2);
+            gap: 15px;
+            margin-top: 20px;
         }
-        .sub-steps-list li.completed {
-            text-decoration: line-through;
-            color: #6b7280;
-        }
-        .delete-btn {
-            background: none;
-            border: none;
-            color: #e74c3c;
-            cursor: pointer;
-            font-size: 1.2rem;
-            padding: 0 5px;
-            opacity: 0.5;
-            transition: opacity 0.2s;
-        }
-        .delete-btn:hover {
-            opacity: 1;
-        }
-        .task-card .delete-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .sub-steps-list .delete-btn {
-            font-size: 1rem;
-        }
-    </style>
-</head>
-<body>
-    <div class="visitor-counter-top">
-        <p><script type="text/javascript" src="https://counter.websiteout.com/js/7/0/0/0"></script></p>
-    </div>
 
-    <div class="container">
-        <a href="no.html" class="glitch-button">
-          <span class="glitch-text">Read My Way Forward</span>
-        </a>
-        <br><br>
-
-        <div class="top-bar">
-            <div id="circular-clock"></div>
-            <div class="banner-nav">
-                <div class="dropdown">
-                    <button class="dropdown-btn">♡</button>
-                    <div class="dropdown-content">
-                        <a href="#">♡ Back Home ♡</a>
-                        <hr>
-                        <a href="http://connectkorner.cindnesskult.com" target="_blank" rel="noopener noreferrer">♡ Connect Korner Forum ♡</a>
-                        <a href="NDguide.resources.html">♡ Support Suggestions ♡</a>
-                        <a href="creativityvstructure.html">♡ Creativity & Structure ♡</a>
-                        <a href="adhdcore.html">♡ ADHD stuff ♡</a>
-                        <a href="adhdmeds.html">♡ ADHD Med Psychoed ♡</a>
-                        <a href="glutamate.gaba.html">♡ Holistic ADHD Recs ♡</a>
-                        <hr>
-                        <a href="link.to.more.docs.html">♡ Printables&Downloads ♡</a>
-                        <a href="#resource-hub">♡ More Links ♡</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="dashboard-banner">
-            <div class="header-content">
-                <h1 class="title gradient-text">Cindness KULT</h1>
-                <p class="subtitle">a non-cult collaboration zone for growth and learning 👾</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3 class="text-xl font-bold text-left text-light-text mb-4">Give me any problem and I'll give you the solution--and it'll always be kindness.</h3>
-            <p class="text-left text-light-text text-lg">Loneliness? Lack of kindness.</p>
-            <p class="text-left text-light-text text-lg">Mental health problems? Lack of kindness.</p>
-            <p class="text-left text-light-text text-lg">People are treating you poorly, or your boss isn't paying you enough? Lack of kindness.</p>
-            <p class="text-left text-xl font-bold gradient-text mt-4"><i>The answer is always kindness.</i></p>
-        </div>
-
-        <div class="section">
-            <h2 class="welcome-header">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--purple)" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.0001 2.25L9.57013 9.48912L2.25008 10.1472L7.69741 15.1764L6.15584 22.25L12.0001 18.5772L17.8444 22.25L16.3028 15.1764L21.7501 10.1472L14.4301 9.48912L12.0001 2.25Z" stroke="#9B59B6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Welcome
-            </h2>
-            <p>HI. This space is a digital sanctuary for thinkers, creators, and collaborators. We believe in the power of open dialogue and collective growth. Explore the pathways below to dive into our shared resources and projects.</p>
-        </div>
-
-        <div class="section">
-            <h2 class="gradient-text">What is Neurodivergence?</h2>
-            <p class="mb-4"><strong>It's a Different Operating System:</strong> Like Mac or PC. Brains naturally vary. These differences are valuable, not defects.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-                <div class="content-card">
-                    <h3 class="text-lg">Neurotypical Processing</h3>
-                    <ul class="list-disc list-inside space-y-2 mt-4">
-                        <li><strong>Top-Down Processing:</strong> Sees the big picture first, then details.</li>
-                        <li><strong>Social Rules & Harmony:</strong> Prioritizes group cohesion, indirect communication.</li>
-                        <li><strong>Multitasking:</strong> Good at juggling many tasks.</li>
-                        <li><strong>Filtered Senses:</strong> Tunes out background noise.</li>
-                        <li><strong>Strengths:</strong> The Farmer, Diplomat, Builder (social, stable, community-focused).</li>
-                    </ul>
-                </div>
-                <div class="content-card">
-                    <h3 class="text-lg">Neurodivergent Processing</h3>
-                    <ul class="list-disc list-inside space-y-2 mt-4">
-                        <li><strong>Bottom-Up Processing:</strong> Sees details first, then the big picture.</li>
-                        <li><strong>Direct & Logical:</strong> Prefers clear, literal communication; eye contact can be overwhelming.</li>
-                        <li><strong>Hyperfocus:</strong> Deep dives into specific interests.</li>
-                        <li><strong>Heightened Senses:</strong> Aware of all sensory input.</li>
-                        <li><strong>Strengths:</strong> The Hunter, Watcher, Innovator (focused, innovative, morally consistent).</li>
-                    </ul>
-                </div>
-            </div>
-            <h3 class="mt-8">The Problem: A Mismatch</h3>
-            <p>Modern society's neurotypical demands can disable neurodivergent individuals.</p>
-            <ul class="list-disc list-inside space-y-2 mt-4">
-                <li><strong>Unspoken Social Rules:</strong> Expectations of neurotypical communication lead to burnout and self-betrayal.</li>
-                <li><strong>Rigid Societal Demands:</strong> 9-to-5 schedules and overstimulating environments are not built for neurodivergent processing.</li>
-            </ul>
-            <h3 class="mt-8">The Solution: Cultural Competence</h3>
-            <p>Build a shared language, drop assumptions, and create environments that value all operating systems.</p>
-            <div class="mt-6 p-4 rounded-lg" style="background-color: rgba(13, 15, 26, 0.5); border-left: 4px solid var(--blue);">
-                <p><strong>Key Fact:</strong> Neurodivergence is not an intellectual or language disability.</p>
-                <p class="mt-2"><strong>Autism Spectrum Disorder (ASD):</strong> Unique social/sensory processing, focused interests.</p>
-                <p class="mt-2"><strong>Attention-Deficit/Hyperactivity Disorder (ADHD):</strong> Differences in attention regulation, impulsivity, hyperactivity. Often creative and hyperfocused.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="connect-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="var(--purple)">
-                    <path d="M11 2h2v11h-2z"/>
-                    <path d="M16 13h-2v11h2z"/>
-                    <path d="M7 13h-2v11h2z"/>
-                    <path d="M12 2l-12 22h24z"/>
-                </svg>
-                Connect Korner (a forum for the kind to connect)
-            </h2>
-            <p>A place for thinkers to connect, collaborate, and share ideas. </p>
-            <ul class="link-pool">
-                <li><a href="http://connectkorner.cindnesskult.com" target="_blank" rel="noopener noreferrer">Go to the Forum</a></li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2 class="gradient-text">The Problem</h2>
-            <p><strong class="problem-bold">Social Disconnection:</strong> Our "third places" are gone. We are more connected, and yet more isolated, than ever. Social media has become a fractured reality, and we need to bridge the gap and bring awareness to our shared experiences.</p>
-            <p><strong class="problem-bold">Systemic Invalidation:</strong> Clinical diagnostics often blame the individual rather than the system. We need better tools for understanding trauma, better tools for therapy, and better treatment that validates lived experience instead of dismissing it. This work is rooted in anti-racism and LGBTQ+ inclusivity.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-6">
-                <div class="content-card">
-                    <h3 class="text-xl font-semibold text-center mb-4" style="font-size: 1.1rem;">The Central Dialectic: A Bell Curve of Mental Health</h3>
-                    <p class="text-center mb-4 text-base">Healthy functioning exists in a state of flexible equilibrium. Pathology emerges at the extremes of too much structure (rigidity) or too much creativity (chaos).</p>
-                    <div class="chart-container">
-                        <canvas id="bellCurveChart"></canvas>
-                    </div>
-                </div>
-                <div class="content-card">
-                    <h3 class="text-xl font-semibold text-center mb-4">Oscillation Between Extremes</h3>
-                    <p class="text-center mb-4">Some conditions, like Bipolar Disorder, can be seen as a violent swing between the two poles.</p>
-                    <div class="chart-container">
-                        <canvas id="oscillationChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="gradient-text">The Path of Least Resistance—The Solution</h2>
-            <p>This space is my response. It's where I share tools for therapy, research, and understanding neurodivergence. The core of this work is finding the balance between <strong>Creativity & Structure</strong>. It's all grounded in my <strong>Interwoven Roots Theory</strong>, which seeks to prevent harm by building kinder systems.</p>
-            <p>Want to know when my book on this theory is ready? Sign up for exclusive updates.</p>
-
-            <div id="mc_embed_shell" class="mt-6">
-                <div id="mc_embed_signup">
-                    <form action="https://cindnesskult.us16.list-manage.com/subscribe/post?u=d60ef7df43ebff6df64112978&id=02266560a9&f_id=00b89ee0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                        <div id="mc_embed_signup_scroll">
-                            <h2>sign up for updates :)</h2>
-                            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-                            <div class="mc-field-group"><label for="mce-FNAME">First Name </label><input type="text" name="FNAME" class=" text" id="mce-FNAME" value=""></div>
-                            <div id="mce-responses" class="clear foot">
-                                <div class="response" id="mce-error-response" style="display: none;"></div>
-                                <div class="response" id="mce-success-response" style="display: none;"></div>
-                            </div>
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                <input type="text" name="b_d60ef7df43ebff6df64112978_02266560a9" tabindex="-1" value="">
-                            </div>
-                            <div class="optionalParent">
-                                <div class="clear foot">
-                                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                                    <p style="margin: 0px auto;"><a href="http://eepurl.com/jkHC2Q" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="gradient-text">Self-Compassion</h2>
-            <div class="flyer-container">
-                <img src="https://embrace-autism.com/wp-content/uploads/flyer-SelfCompassion.svg" alt="Self-Compassion flyer from Embrace Autism">
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="gradient-text">Sensory Supports and Advice👾</h2>
-            <p class="text-lg text-light-text">The world is overwhelming, take some time and space to settle in.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <div class="content-card">
-                    <h3 class="font-bold mb-4 text-left font-serif">🧠 Manage Your Sensory Needs</h3>
-                    <ul class="list-disc list-inside text-left space-y-4">
-                        <li>
-                            <p><strong>Fix Your Space:</strong> Use calming scents (like coffee or essential oils) or adjust lighting to make your environment feel safe and comfortable.</p>
-                        </li>
-                        <li>
-                            <p><strong>Plan a "Sensory Diet":</strong> Build a routine of activities to keep your nervous system calm: use a weighted blanket, exercise, or listen to curated playlists with noise-canceling headphones.</p>
-                        </li>
-                        <li>
-                            <p><strong>Ease Transitions:</strong> Make hard sensory shifts (like getting out of the shower) easier with soft towels, comfy clothes, and a simple calming routine afterward.</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="content-card">
-                    <h3 class="font-bold mb-4 text-left font-serif">❤️ Protect Your Emotional Energy</h3>
-                    <ul class="list-disc list-inside text-left space-y-4">
-                        <li>
-                            <p><strong>Set Firm Boundaries:</strong> Practice saying "I need a break" or "I don't have energy for this." Plan your exit from social events ahead of time. Leaving early is okay.</p>
-                        </li>
-                        <li>
-                            <p><strong>Schedule Recharge Time:</strong> After being social, plan for intentional alone time with your interests. Honor your natural sleep patterns whenever possible.</p>
-                        </li>
-                        <li>
-                            <p><strong>Use the "Spoon Theory":</strong> Think of your energy as "spoons." Each task costs a spoon. This helps you manage your energy without self-judgment. When you're out, you're out.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="gradient-text">About Me 👾</h2>
-            <div class="profile-card">
-                <img src="https://lh3.googleusercontent.com/a/ACg8ocKbt7sfDcLSlGp7EYryYvUXZKl0RnqnsVi9sIRFwWTIphxA_zg0=s576-c-no" alt="Vivian Mitchell professional photo">
-                <div class="name-title">
-                    <p>Vivian Mitchell</p>
-                    <p>MA, APCC, Ph.D. student</p>
-                </div>
-            </div>
-            <p>Greetings! My name is Vivian (they/them) and I'm a pscyhology-enjoyer, poetry enthusiast, and practicing psychotherapist. I'm also in training to become a psychologist, and I currently work as an APCC in private practice, focusing on differential diagnosis, clinical assessment and evaluation, person-centered approaches, and neurodiversity. My work is dedicated to creating validating, person-centered tools that challenge systemic invalidation. My focus is on neurodiversity, trauma, and the LGBTQ+ community, blending evidence-based practices with the humanistic need for creativity and connection. This space is where I share my work to help build kinder, more effective systems for therapy and understanding.</p>
-        </div>
-
-        <div class="section simple-nav">
-            <a href="https://www.tiktok.com/@vivi.yum?lang=en" target="_blank">TikTok</a>
-            <a href="https://www.linkedin.com/in/vivianmmitchell/" target="_blank">LinkedIn</a>
-            <a href="https://account.venmo.com/u/vivianmitchell93" targent="_blank">Donate to the Kult :3/phd, computer n reserach fund</a>
-            <p>Email: <a href="mailto:cindnesskult@gmail.com" class="contact-button">cindnesskult@gmail.com</a></p>
-        </div>
-
-        <div class="section" id="resource-hub">
-            <h2 class="gradient-text">Resource Hub 👾</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h4>OCD</h4>
-                    <ul class="link-pool">
-                        <li><a href="erp.info.html">ERP (OCD) therapy: an intro </a></li>
-                        <li><a href="ocd.risk.html">Understanding OCD & Risk</a></li>
-                        <li><a href="ocdtools.html">OCD tools! (fun/downloadable) </a></li>
-                        <li><a href="tierlist.html">ERP Tier List</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>ASD/ADHD</h4>
-                    <ul class="link-pool">
-                        <li><a href="diff2.html">It's a Different Operating System, Not a Deficit</a></li>
-                        <li><a href="social.diff.html">Autistic Super-Strengths</a></li>
-                        <li><a href="adhdcore.html">Executive Functioning & ADHD</a></li>
-                        <li><a href="dtm.html"> Neurodivergent Trauma/Dissociation/Misdiagnosis</a></li>
-                        <li><a href="stuff.html"> More on Neurodivergent Misunderstandings</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Other Mental Health</h4>
-                    <ul class="link-pool">
-                        <li><a href="evolution.html">Evolution of Harm (The Roots)</a></li>
-                        <li><a href="maintheory.html">Interwoven Roots Theory</a></li>
-                        <li><a href="glutamate.gaba.html">Glutamate & GABA Balance</a></li>
-                        <li><a href="diss.html">Dissociative Disorders</a></li>
-                        <li></li><a href="psychosis.html">Psychotic Symptoms Overview</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3 class="mt-12">Free Resources/Tools</h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <ul class="link-pool">
-                    <li><a href="start.here.whatisND.html"> Masking?</a><li>
-                    <li><a href="NDguide.resources.html">Support/Accommodations for NDs</a></li>
-                    <li><a href="creativityvstructure.html">Creativity & Structure</a></li>
-                    <li><a href="printerfriendlyCS.html">Creativity & Structure (Printer Friendly)</a></li>
-                    <li><a href="yinyang.html"> The "why" behind balance</a></li>
-                </ul>
-
-                <ul class="link-pool">
-                    <li><a href="sensorygame.html">Free Sensory Game (Printable)</a></li>
-                    <li><a href="planner.html">Free Printable Planner Pages (Daily)</a></li>
-                    <li><a href="adhdmeds.html">♡ ADHD Med Psychoed ♡</a></li>
-                    <li><a href="weeklyplanner.html">Weekly Planner (downloadable)</a></li>
-                    <li><a href="vagus.html"> Anxiety reducing suggestions </a></li>
-                </ul>
-
-                <ul class="link-pool">
-                    <li class="attention-button-li"><a href="interactive.sensory.html" class="attention-button">Interactive Sensory</a></li>
-                    <li class="attention-button-li"><a href="link.to.more.docs.html" class="attention-button">Printables& Downloads</a></li>
-                    <li class="attention-button-li"><a href="choicetool.html" class="attention-button"> Choice Tool </a></li>
-                </ul>
-            </div>
-
-            <h3 class="mt-12">For Clinicians</h3>
-            <ul class="link-pool" style="margin-top: 20px; flex-direction: row; justify-content: center;">
-                <li><a href="clinicians.korner.html">Clinician's Korner</a></li>
-            </ul>
-
-            <h3 class="mt-12">Creative Works & Socials</h3>
-            <ul class="link-pool" style="margin-top: 20px; flex-direction: row; justify-content: center;">
-                <li><a href="https://plasma-pet.tumblr.com/tagged/ocpoetry">Some Poems</a></li>
-                <li><a href="https://www.instagram.com/viviyum/" target="_blank">Instagram (@viviyum)</a></li>
-            </ul>
-        </div>
-
-        <div class="section task-manager-body">
-            <div id="app">
-                <header class="text-center mb-8">
-                    <h2 class="gradient-text">Daily Game Plan</h2>
-                    <p class="text-sm" style="color: var(--light-text); opacity: 0.7;">A Dynamic Task Manager</p>
-                </header>
-
-                <section id="controls" class="mb-8 p-4 bg-black/20 rounded-lg flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <button id="show-modal-btn" class="w-full sm:w-auto contact-button">
-                        ✨ Add New Task
-                    </button>
-                    <button id="download-tasks-btn" class="w-full sm:w-auto bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg transition-colors text-sm">
-                        Download Tasks
-                    </button>
-                    <div class="flex items-center gap-2">
-                        <span class="text-sm font-semibold">Sort By:</span>
-                        <button id="sort-importance-btn" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg transition-colors text-sm">Importance</button>
-                        <button id="sort-time-btn" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg transition-colors text-sm">Time</button>
-                    </div>
-                </section>
-
-                <section id="progress-section" class="mb-12">
-                    <h3 class="text-xl font-bold text-center mb-4" style="color: var(--light-text);">Your Progress</h3>
-                    <div class="task-manager-chart-container">
-                        <canvas id="progressChart"></canvas>
-                    </div>
-                </section>
-
-                <main id="tasks-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                </main>
-            </div>
-        </div>
-
-        <footer>
-            <p>© 2025 Vivian Mitchell. Built with kindness.</p>
-        </footer>
-
-    </div>
-
-    <div id="task-modal" class="modal-backdrop fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden z-50">
-        <div class="rounded-lg shadow-xl p-6 w-full max-w-md" style="background-color: var(--dark-bg); border: 1px solid rgba(52, 152, 219, 0.3);">
-            <h2 class="text-2xl font-bold mb-4" style="font-family: 'Press Start 2P', cursive; color: var(--light-text);">Add a New Task</h2>
-            <form id="task-form">
-                <div class="space-y-4">
-                    <input type="text" id="task-title" placeholder="Task Title" class="w-full p-2 rounded-lg border focus:ring-2" style="background-color: rgba(13, 15, 26, 0.8); color: var(--light-text); border-color: rgba(52, 152, 219, 0.3); --tw-ring-color: var(--blue);" required>
-                    <div class="grid grid-cols-2 gap-4">
-                        <input type="number" id="task-time" placeholder="Time (mins)" class="w-full p-2 rounded-lg border focus:ring-2" style="background-color: rgba(13, 15, 26, 0.8); color: var(--light-text); border-color: rgba(52, 152, 219, 0.3); --tw-ring-color: var(--blue);" required>
-                        <select id="task-pinch" class="w-full p-2 rounded-lg border focus:ring-2" style="background-color: rgba(13, 15, 26, 0.8); color: var(--light-text); border-color: rgba(52, 152, 219, 0.3); --tw-ring-color: var(--blue);" required>
-                            <option>Passion</option>
-                            <option>Interest</option>
-                            <option>Novelty</option>
-                            <option>Coordination</option>
-                            <option>Hurry</option>
-                        </select>
-                    </div>
-                    <select id="task-importance" class="w-full p-2 rounded-lg border focus:ring-2" style="background-color: rgba(13, 15, 26, 0.8); color: var(--light-text); border-color: rgba(52, 152, 219, 0.3); --tw-ring-color: var(--blue);" required>
-                        <option value="1">🔥 Do It Now</option>
-                        <option value="2">🎯 Focus Next</option>
-                        <option value="3">⏳ Schedule It</option>
-                        <option value="4">✨ Someday/Maybe</option>
-                    </select>
-                </div>
-                <div class="mt-6 flex justify-end gap-4">
-                    <button type="button" id="close-modal-btn" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">Cancel</button>
-                    <button type="submit" class="contact-button">Add Task</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        const oceanForest = {
-            primary: '#2ECC71',
-            secondary: '#3498DB',
-            tertiary: '#1A5276',
-            text: '#ecf0f1',
-            grid: 'rgba(236, 240, 241, 0.1)',
-            primaryTransparent: 'rgba(46, 204, 113, 0.4)',
-            secondaryTransparent: 'rgba(52, 152, 219, 0.4)'
-        };
-
-        const tooltipTitleCallback = (tooltipItems) => {
-            const item = tooltipItems[0];
-            let label = item.chart.data.labels[item.dataIndex];
-            if (Array.isArray(label)) {
-                return label.join(' ');
-            }
-            return label;
-        };
-
-        const defaultChartOptions = {
-            maintainAspectRatio: false,
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: false
-                },
-                tooltip: {
-                    callbacks: {
-                        title: tooltipTitleCallback
-                    }
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: { color: oceanForest.text, font: { family: "'Source Serif Pro', serif" } },
-                    grid: { color: oceanForest.grid }
-                },
-                x: {
-                    ticks: { color: oceanForest.text, font: { family: "'Source Serif Pro', serif" } },
-                    grid: { color: oceanForest.grid }
-                }
-            }
-        };
-
-        const bellCurveCtx = document.getElementById('bellCurveChart').getContext('2d');
-        new Chart(bellCurveCtx, {
-            type: 'line',
-            data: {
-                labels: ['STRUCTURE\n(Rigidity)', 'EQUILIBRIUM\n(Flexibility)', 'CREATIVITY\n(Chaos)'],
-                datasets: [{
-                    label: 'Mental Health',
-                    data: [20, 100, 20],
-                    borderColor: oceanForest.primary,
-                    backgroundColor: oceanForest.primaryTransparent,
-                    fill: true,
-                    tension: 0.4,
-                    pointRadius: 0
-                }]
-            },
-            options: {
-                ...defaultChartOptions,
-                scales: {
-                    y: {
-                        display: false
-                    },
-                    x: {
-                        ...defaultChartOptions.scales.x,
-                        grid: {
-                            display: false
-                        },
-                        ticks: {
-                            ...defaultChartOptions.scales.x.ticks,
-                            font: {
-                                size: 14,
-                                family: "'Source Serif Pro', serif"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        const oscillationCtx = document.getElementById('oscillationChart').getContext('2d');
-        new Chart(oscillationCtx, {
-            type: 'line',
-            data: {
-                labels: ['Phase 1', 'Phase 2', 'Phase 3', 'Phase 4', 'Phase 5', 'Phase 6'],
-                datasets: [{
-                    label: 'Creative Energy',
-                    data: [10, 90, 85, 20, 15, 70],
-                    borderColor: oceanForest.primary,
-                    backgroundColor: oceanForest.primaryTransparent,
-                    fill: true,
-                    tension: 0.4
-                }, {
-                    label: 'Rigid Structure',
-                    data: [90, 10, 15, 80, 85, 30],
-                    borderColor: oceanForest.secondary,
-                    backgroundColor: oceanForest.secondaryTransparent,
-                    fill: true,
-                    tension: 0.4
-                }]
-            },
-            options: {
-                ...defaultChartOptions,
-                plugins: { ...defaultChartOptions.plugins, legend: { display: true, labels: { color: oceanForest.text, font: { family: "'Source Serif Pro', serif" } } } }
-            }
-        });
-
-        // --- NEW TASK MANAGER SCRIPT ---
-        document.addEventListener('DOMContentLoaded', () => {
-            if (!document.getElementById('app')) return;
-
-            let tasks = [];
-            let currentSort = 'importance';
-
-            const tasksContainer = document.getElementById('tasks-container');
-            const modal = document.getElementById('task-modal');
-            const showModalBtn = document.getElementById('show-modal-btn');
-            const closeModalBtn = document.getElementById('close-modal-btn');
-            const taskForm = document.getElementById('task-form');
-            const sortImportanceBtn = document.getElementById('sort-importance-btn');
-            const sortTimeBtn = document.getElementById('sort-time-btn');
-            const downloadTasksBtn = document.getElementById('download-tasks-btn');
-            
-            const importanceMeta = {
-                '1': { title: '🔥 Do It Now' },
-                '2': { title: '🎯 Focus Next' },
-                '3': { title: '⏳ Schedule It' },
-                '4': { title: '✨ Someday/Maybe' }
-            };
-            
-            const pinchColors = {
-                'Hurry': 'bg-red-900/70 text-red-200',
-                'Urgency': 'bg-yellow-900/70 text-yellow-200',
-                'Passion': 'bg-pink-900/70 text-pink-200',
-                'Interest': 'bg-sky-900/70 text-sky-200',
-                'Competition': 'bg-indigo-900/70 text-indigo-200',
-                'Coordination': 'bg-teal-900/70 text-teal-200',
-                'Novelty': 'bg-purple-900/70 text-purple-200',
-            };
-
-            function saveTasks() {
-                localStorage.setItem('gamePlanTasks', JSON.stringify(tasks));
-            }
-
-            function loadTasks() {
-                const savedTasks = localStorage.getItem('gamePlanTasks');
-                tasks = savedTasks ? JSON.parse(savedTasks) : [];
-            }
-
-            function renderTasks() {
-                saveTasks();
-                tasksContainer.innerHTML = '';
-                
-                let sortedTasks = [...tasks];
-                if (currentSort === 'time') {
-                    sortedTasks.sort((a, b) => a.time - b.time);
-                } else {
-                    sortedTasks.sort((a, b) => a.importance - b.importance);
-                }
-
-                if (tasks.length === 0) {
-                    tasksContainer.innerHTML = `<div class="col-span-full text-center p-8 rounded-lg" style="background-color: rgba(13, 15, 26, 0.5);">
-                        <p style="color: var(--light-text); opacity: 0.7;">Your task list is empty.</p>
-                        <p style="color: var(--light-text); opacity: 0.5;">Click '✨ Add New Task' to get started!</p>
-                    </div>`;
-                    updateChart();
-                    return;
-                }
-
-                const groupedTasks = sortedTasks.reduce((acc, task) => {
-                    const key = currentSort === 'importance' ? task.importance : 'allTasks';
-                    if (!acc[key]) acc[key] = [];
-                    acc[key].push(task);
-                    return acc;
-                }, {});
-                
-                tasksContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6';
-
-                Object.keys(groupedTasks).sort().forEach(groupKey => {
-                    const groupTasks = groupedTasks[groupKey];
-                    
-                    if (currentSort === 'importance') {
-                        const groupWrapper = document.createElement('div');
-                        const meta = importanceMeta[groupKey];
-                        const titleEl = document.createElement('h3');
-                        titleEl.className = "font-bold text-lg mb-4";
-                        titleEl.style.color = "var(--light-text)";
-                        titleEl.textContent = meta.title;
-                        groupWrapper.appendChild(titleEl);
-                        
-                        const tasksDiv = document.createElement('div');
-                        tasksDiv.className = "space-y-4";
-                        groupTasks.forEach(task => tasksDiv.appendChild(createTaskElement(task)));
-                        groupWrapper.appendChild(tasksDiv);
-                        tasksContainer.appendChild(groupWrapper);
-                    } else {
-                        groupTasks.forEach(task => tasksContainer.appendChild(createTaskElement(task)));
-                    }
-                });
-                
-                if (currentSort === 'time') {
-                    tasksContainer.className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4';
-                }
-                updateChart();
-            }
-
-            function createTaskElement(task) {
-                const timeText = task.time > 0 ? `<p class="text-xs" style="color: var(--light-text); opacity: 0.6;">🕰️ ${task.time} min</p>` : '';
-                const pinchColor = pinchColors[task.pinch] || 'bg-gray-700 text-gray-200';
-                const completedClass = task.completed ? 'completed' : '';
-                const subStepsHtml = (task.subSteps || []).map((step, index) =>
-                    `<li data-index="${index}" class="${step.completed ? 'completed' : ''}">
-                        <div class="flex items-center gap-2">
-                           <input type="checkbox" ${step.completed ? 'checked' : ''} class="sub-step-checkbox accent-purple-400">
-                           <span>${step.text}</span>
-                        </div>
-                        <button class="delete-btn" data-action="delete-sub-step">×</button>
-                    </li>`
-                ).join('');
-
-                const card = document.createElement('div');
-                card.id = task.id;
-                card.className = `task-card rounded-lg p-4 shadow-sm ${completedClass}`;
-                card.innerHTML = `
-                    <button class="delete-btn" data-action="delete-task">×</button>
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-start cursor-pointer" data-action="toggle-main">
-                            <h3 class="font-bold pr-4" style="color: var(--light-text);">${task.title}</h3>
-                            ${timeText}
-                        </div>
-                        <div class="mt-4">
-                            <p class="text-sm font-semibold mb-2" style="color: var(--light-text); opacity: 0.8;">Smallest Next Steps:</p>
-                            <ul class="sub-steps-list text-sm space-y-2">${subStepsHtml}</ul>
-                            <input type="text" class="sub-step-input w-full p-1.5 rounded-md mt-2 border text-sm" placeholder="Add a small step..." style="background-color: var(--dark-bg); color: var(--light-text); border-color: rgba(52, 152, 219, 0.3);">
-                        </div>
-                    </div>
-                    <div class="flex justify-end items-center mt-4 pt-4 border-t" style="border-color: rgba(52, 152, 219, 0.2);">
-                        <span class="pinch-motivator text-xs font-semibold px-2 py-1 rounded-full ${pinchColor}">${task.pinch}</span>
-                    </div>
-                `;
-                return card;
-            }
-
-            function updateChart() {
-                const totalTasks = tasks.length;
-                const completedTasks = tasks.filter(t => t.completed).length;
-                if (window.progressChart) {
-                    window.progressChart.data.datasets[0].data = [completedTasks, totalTasks - completedTasks];
-                    window.progressChart.update();
-                }
-            }
-            
-            function handleContainerClick(e) {
-                const card = e.target.closest('.task-card');
-                if (!card) return;
-
-                const taskId = card.id;
-                const taskIndex = tasks.findIndex(t => t.id === taskId);
-                if (taskIndex === -1) return;
-                const task = tasks[taskIndex];
-
-                const action = e.target.dataset.action;
-
-                if (action === 'toggle-main') {
-                    task.completed = !task.completed;
-                } else if (action === 'delete-task') {
-                    tasks.splice(taskIndex, 1);
-                } else if (action === 'delete-sub-step') {
-                    const subStepLi = e.target.closest('li');
-                    const subStepIndex = parseInt(subStepLi.dataset.index, 10);
-                    task.subSteps.splice(subStepIndex, 1);
-                } else if (e.target.classList.contains('sub-step-checkbox')) {
-                    const subStepLi = e.target.closest('li');
-                    const subStepIndex = parseInt(subStepLi.dataset.index, 10);
-                    task.subSteps[subStepIndex].completed = e.target.checked;
-                }
-                
-                renderTasks();
-            }
-
-            function handleInputKeydown(e) {
-                if (e.key === 'Enter' && e.target.classList.contains('sub-step-input')) {
-                    e.preventDefault();
-                    const card = e.target.closest('.task-card');
-                    if (!card) return;
-
-                    const taskId = card.id;
-                    const task = tasks.find(t => t.id === taskId);
-                    if (!task) return;
-                    
-                    const text = e.target.value.trim();
-                    if (text) {
-                        if (!task.subSteps) task.subSteps = [];
-                        task.subSteps.push({ text: text, completed: false });
-                        e.target.value = '';
-                        renderTasks();
-                    }
-                }
-            }
-
-            function toggleModal() {
-                modal.classList.toggle('hidden');
-            }
-            
-            function downloadTasksAsTxt() {
-                if (tasks.length === 0) {
-                    return;
-                }
-                let content = "Cindness KULT - Daily Game Plan\n";
-                content += "===================================\n\n";
-                const importanceMap = {
-                    '1': '🔥 Do It Now',
-                    '2': '🎯 Focus Next',
-                    '3': '⏳ Schedule It',
-                    '4': '✨ Someday/Maybe'
-                };
-                tasks.sort((a, b) => a.importance - b.importance).forEach(task => {
-                    content += `[${task.completed ? 'X' : ' '}] ${task.title}\n`;
-                    content += `    Importance: ${importanceMap[task.importance]}\n`;
-                    content += `    Time: ${task.time} mins\n`;
-                    content += `    Motivator: ${task.pinch}\n`;
-                    if (task.subSteps && task.subSteps.length > 0) {
-                        content += `    Sub-steps:\n`;
-                        task.subSteps.forEach(step => {
-                            content += `    - [${step.completed ? 'X' : ' '}] ${step.text}\n`;
-                        });
-                    }
-                    content += "\n-----------------------------------\n\n";
-                });
-                const blob = new Blob([content], { type: 'text/plain' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'daily-game-plan.txt';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-            }
-
-            showModalBtn.addEventListener('click', toggleModal);
-            closeModalBtn.addEventListener('click', toggleModal);
-            downloadTasksBtn.addEventListener('click', downloadTasksAsTxt);
-
-            modal.addEventListener('click', (e) => {
-                if (e.target.closest('.modal-backdrop') && !e.target.closest('.modal-backdrop > div')) {
-                    toggleModal();
-                }
-            });
-
-            taskForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const newTask = {
-                    id: `task_${Date.now()}`,
-                    title: document.getElementById('task-title').value,
-                    time: parseInt(document.getElementById('task-time').value, 10),
-                    pinch: document.getElementById('task-pinch').value,
-                    importance: document.getElementById('task-importance').value,
-                    subSteps: [],
-                    completed: false
-                };
-                tasks.push(newTask);
-                taskForm.reset();
-                toggleModal();
-                renderTasks();
-            });
-            
-            sortImportanceBtn.addEventListener('click', () => {
-                currentSort = 'importance';
-                renderTasks();
-            });
-            sortTimeBtn.addEventListener('click', () => {
-                currentSort = 'time';
-                renderTasks();
-            });
-
-            const ctx = document.getElementById('progressChart').getContext('2d');
-            window.progressChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Completed', 'To Do'],
-                    datasets: [{
-                        data: [0, 0],
-                        backgroundColor: ['var(--green)', 'rgba(236, 240, 241, 0.1)'],
-                        borderColor: ['var(--green)', 'rgba(236, 240, 241, 0.1)'],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    cutout: '70%',
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: { enabled: true }
-                    }
-                }
-            });
-
-            loadTasks();
-            renderTasks();
-            tasksContainer.addEventListener('click', handleContainerClick);
-            tasksContainer.addEventListener('keydown', handleInputKeydown);
-
-            // --- Clock and Visitor Counter Initialization ---
-            function updateClock() {
-                const now = new Date();
-                const hours = String(now.getHours()).padStart(2, '0');
-                const minutes = String(now.getMinutes()).padStart(2, '0');
-                const seconds = String(now.getSeconds()).padStart(2, '0');
-                const timeString = `${hours}:${minutes}:${seconds}`;
-                const clockElement = document.getElementById('circular-clock');
-                if (clockElement) {
-                    clockElement.textContent = timeString;
-                }
-            }
-
-            updateClock();
-            setInterval(updateClock, 1000);
-        });
-    </script>
-    
-    <script>
-        const visitsSpan = document.getElementById('visits');
-        const apiUrl = 'https://api.countapi.xyz/hit/cindnesskult.com/main';
-
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.value) {
-                    visitsSpan.innerText = data.value.toLocaleString('en-US');
-                } else {
-                    visitsSpan.innerText = 'n/a';
-                }
-            })
-            .catch(error => {
-                console.error("Error fetching visitor count:", error);
-                visitsSpan.innerText = 'counter offline';
-            });
-    </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-Tools
+        .btn-outline {
+            text-decoration: none;
+            color: var(--gold
