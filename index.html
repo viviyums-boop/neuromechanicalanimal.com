@@ -195,4 +195,243 @@
 
         .btn-outline {
             text-decoration: none;
-            color: var(--gold
+            color: var(--gold-glow);
+            border: 1px solid var(--gold-glow);
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--gold-glow);
+            color: var(--bg-dark-block);
+        }
+
+        /* Digital Guides Card Grid */
+        .offers-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 600px) {
+            .offers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .guide-card {
+            border: 1px solid var(--border-ink);
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .guide-card.full-bundle {
+            grid-column: 1 / -1;
+            border: 2px solid var(--gold-accent);
+            background-color: rgba(184, 134, 11, 0.05);
+        }
+
+        .price-tag {
+            font-size: 1.5rem;
+            color: #1a1510;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .buy-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #1a1510;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        /* Rates & FAQ Formatting */
+        .rates-list {
+            list-style: none;
+            margin: 20px 0 35px 0;
+        }
+
+        .rates-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-ink);
+            font-size: 1.1rem;
+        }
+
+        .faq-block {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+        }
+
+        .faq-q {
+            font-weight: bold;
+            color: #1a1510;
+            margin-bottom: 8px;
+            font-size: 1.15rem;
+        }
+
+        .faq-a {
+            padding-left: 15px;
+            border-left: 2px solid var(--border-ink);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-ink);
+            font-size: 0.85rem;
+            color: #5c4a37;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-nav">
+        <a href="#" class="nav-btn">Book Intro Session — $175</a>
+        <a href="#" class="nav-btn">Book Follow-Up — $125</a>
+    </div>
+
+    <div class="main-wrapper">
+        
+        <header>
+            <h1>The Neuro-Mechanical Animal</h1>
+            <div class="subtitle">Somatic Healing & Nervous System Regulation</div>
+        </header>
+
+        <section class="content-layout">
+            <div>
+                <h2>The Neuro-Mechanical Animal</h2>
+                <p>Welcome to <strong>The Neuro-Mechanical Animal</strong>. Within this healing structure, we recognize that the creative animal (you) is intricately guided through neuro-mechanical means. Everything we think, feel, and create is an ongoing dialogue between the brain working in tandem with the physical body.</p>
+            </div>
+            <div class="sketch-side">
+                <img src="https://i.imghippo.com/files/zCbt4014W.jpg" alt="Leonardo da Vinci - Structural heart mechanics study">
+            </div>
+        </section>
+
+        <section class="content-layout">
+            <div>
+                <h2>What is Somatic Healing?</h2>
+                <p>In times of trauma and chronic stress, we naturally lose touch with our physical selves. When forced into states of fight, flight, or survival mode, our nervous system becomes dysregulated. Over time, this manifests as shallow breathing, physical tension, and deeply grooved physical holding patterns that we don't know how to break free from.</p>
+                <p>Somatic healing is the deliberate re-establishment of the connection between the mind and the body. By working with physiological patterns directly, we address somatic dissociation—the feeling of being detached or floating away from yourself—and safely reattach the brain's processing to the body's lived experience.</p>
+            </div>
+            <div class="sketch-side">
+                <img src="https://i.imghippo.com/files/dv8251ows.jpg" alt="Leonardo da Vinci - Skeleton and head bone study">
+            </div>
+        </section>
+
+        <section class="practitioner-block">
+            <div class="photo-frame">
+                <img src="https://i.imghippo.com/files/feHN3922vjY.jpg" alt="Vivian Mitchell">
+            </div>
+            <div class="practitioner-info">
+                <h2>About the Practitioner</h2>
+                <div class="meta-tags">
+                    Vivian Mitchell, APCC #16067 | Advanced Clinical Psychology Practitioner & Practicing Therapist<br>
+                    Virtual Sessions (California)
+                </div>
+                <p>My journey in psychological work spans over a decade, completing a full circle from my early foundations as a university tutor in biological psychology to deep research in social psychology and cognitive development. As a published researcher, I have worked across a diverse array of social services and mental healthcare settings.</p>
+                <p>In my practice, I specialize in ADHD, Autism, LGBTQI+ support, and dissociative disorders. Lately, my focus has shifted heavily toward somatic healing because I have seen firsthand what complex trauma does to the body.</p>
+                
+                <div class="contact-buttons">
+                    <a href="mailto:vivianmorganmitchell@gmail.com" class="btn-outline">Email Vivian</a>
+                    <a href="#" class="btn-outline">Client Portal</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 60px;">
+            <h2>Digital Guides & Manuals</h2>
+            <p>Self-paced regulatory tools grounded in biological mechanics to support your daily practice.</p>
+            
+            <div class="offers-grid">
+                <div class="guide-card">
+                    <div>
+                        <h3>Mitochondrial Healing Food Guide</h3>
+                        <div class="price-tag">$7</div>
+                        <p>A precise blueprint detailing optimal foods to consume and specific elements to avoid to support cellular energy, reduce systemic inflammation, and enhance vitality.</p>
+                    </div>
+                    <a href="#" class="buy-link">Purchase Guide →</a>
+                </div>
+
+                <div class="guide-card">
+                    <div>
+                        <h3>Order of Digestion & Enteric Regulation</h3>
+                        <div class="price-tag">$7</div>
+                        <p>A practical handbook focused on balancing the gut-brain axis, optimizing metabolic sequencing, and calming the enteric nervous system to restore true baseline stability.</p>
+                    </div>
+                    <a href="#" class="buy-link">Purchase Guide →</a>
+                </div>
+
+                <div class="guide-card full-bundle">
+                    <div>
+                        <h3>The Complete Regulation Bundle</h3>
+                        <div class="price-tag">$10</div>
+                        <p>Acquire both foundational manuals together. This combined resource pairs structural metabolic support with targeted enteric nervous system regulation for a comprehensive approach to somatic wellness.</p>
+                    </div>
+                    <a href="#" class="buy-link" style="color: var(--gold-accent);">Buy the Bundle →</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 50px;">
+            <h2>Somatic Healing Sessions</h2>
+            <p>Work directly with me through virtual somatic healing sessions tailored to your nervous system architecture.</p>
+            <ul class="rates-list">
+                <li><strong>Initial Intake & Assessment Session:</strong> $175</li>
+                <li><strong>Subsequent Individual Sessions:</strong> $125</li>
+                <li><strong>Somatic Package (5 Sessions):</strong> $500</li>
+            </ul>
+        </section>
+
+        <section class="content-layout faq-block">
+            <div>
+                <h2>Answers to Common Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-q">How is somatic healing different from traditional psychotherapy?</div>
+                    <div class="faq-a">
+                        <p>Traditional psychotherapy heavily emphasizes cognitive processing, verbal narrative, clinical pathology, and diagnostic frameworks. Somatic healing focuses directly on structural bodywork and physiological state regulation. Rather than just talking through an experience, we work directly on the body's physical integration of stress and dissociation, physically reattaching the mind to real-time physical feedback.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">Do you accept insurance?</div>
+                    <div class="faq-a">
+                        <p>No, insurance is not accepted for somatic healing services. If you are located within the state of California and strictly require formal mental health psychotherapy, you are welcome to reach out to me directly to discuss traditional therapeutic care pathways under my APCC registration.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">What should I expect from the initial sessions?</div>
+                    <div class="faq-a">
+                        <p>True physiological changes take time; we generally recommend a baseline commitment of at least five sessions to begin shifting deeply grooved somatic holding patterns. Your initial intake session is dedicated to gathering your unique developmental history and physiological background. From there, you will receive tailored somatic recommendations, digital guides, and introductory movement or breathing exercises to begin tracking your nervous system independently.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sketch-side" style="align-self: flex-start; margin-top: 60px;">
+                <img src="https://i.imghippo.com/files/Cjt7994lEg.jpg" alt="Leonardo da Vinci - Muscular structural mechanics anatomy study">
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 The Neuro-Mechanical Animal. All Rights Reserved.</p>
+            <p style="font-size: 0.75rem; margin-top: 5px; opacity: 0.8;">Vivian Mitchell, APCC #16067. Supervised by a licensed clinical professional.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
