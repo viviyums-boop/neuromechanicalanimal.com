@@ -12,7 +12,7 @@
         :root {
             --bg-parchment: #eedfc4;       /* Solid golden parchment */
             --bg-dark-block: #1e1a15;      /* Structural charcoal */
-            --text-dark: #2c2217;          /* Deep sepia ink */accc
+            --text-dark: #2c2217;          /* Deep sepia ink */
             --text-light: #f5edd7;         /* Antique text */
             --gold-accent: #b8860b;        /* Renaissance amber */
             --gold-glow: #e5c158;          /* Glowing gold */
@@ -151,24 +151,13 @@
             margin-bottom: 15px;
         }
 
-        .sketch-btn {
-            display: inline-block;
-            color: #1a1510;
-            text-decoration: none;
-            border: 1px solid var(--border-ink);
-            padding: 8px 16px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .sketch-btn:hover {
-            background-color: var(--border-ink);
-            color: var(--bg-parchment);
+        /* Instruction Box Styling for Manuals */
+        .venmo-instructions {
+            border-left: 3px solid var(--gold-accent);
+            background-color: rgba(184, 134, 11, 0.05);
+            padding: 20px;
+            margin-bottom: 30px;
+            font-size: 1.05rem;
         }
 
         /* Dark Practitioner Bio Block */
@@ -350,16 +339,36 @@
             font-size: 0.8rem;
             color: #5c4a37;
         }
+
+        /* SimplePractice Custom Button Overrides to fit layout */
+        .spwidget-button-wrapper {
+            margin-top: 15px;
+        }
+        .spwidget-button {
+            display: inline-block !important;
+            padding: 8px 16px !important;
+            color: #1a1510 !important;
+            background: transparent !important;
+            border: 1px solid var(--border-ink) !important;
+            border-radius: 0px !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 0.75rem !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1.5px !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+        }
+        .spwidget-button:hover {
+            background-color: var(--border-ink) !important;
+            color: var(--bg-parchment) !important;
+        }
     </style>
 </head>
 <body>
 
     <div class="top-nav">
-        <!-- Start SimplePractice Appointment-Request Widget Embed Code -->
-<style>.spwidget-button-wrapper{text-align: center}.spwidget-button{display: inline-block;padding:  6px 12px;color:  #1371C8;background:  #fff;border:  1px solid #1371C8;border-radius: 4px;font-size: 14px;font-weight: 600;text-decoration: none}.spwidget-button:hover{background:  #fff;color:  #0F5AA0}.spwidget-button:active{color: rgba(255, 255, 255, .75) !important;box-shadow: 0 1px 3px rgba(0, 0, 0, .15) inset}</style>
-<div class="spwidget-button-wrapper"><a href="https://vivian-mitchell.clientsecure.me" class="spwidget-button" data-spwidget-scope-id="23a2ea6b-a3ce-4cda-98c4-623e00046102" data-spwidget-scope-uri="vivian-mitchell" data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-type="OAR" data-spwidget-scope-global data-spwidget-autobind>Request Appointment</a></div>
-<script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
-<!-- End SimplePractice Appointment-Request Widget Embed Code -->
+        <a href="https://vivian-mitchell.clientsecure.me" target="_blank" class="nav-btn">Book a Session with Me</a>
     </div>
 
     <div class="main-wrapper">
@@ -377,8 +386,10 @@
             </div>
             <div class="sketch-side">
                 <img src="https://64.media.tumblr.com/c9025c2a1aa67d94dfa0b6bf7573a0cc/d556df64d8421053-1a/s1280x1920/732ef121ec00a0d5fb82ac4faef33a470b3ac22f.jpg" alt="Leonardo da Vinci - Structural heart mechanics study">
-                <a href="#" class="sketch-btn">Book a somatic healing session now</a>
-            </div>
+                
+                <div class="spwidget-button-wrapper"><a href="https://vivian-mitchell.clientsecure.me" class="spwidget-button" data-spwidget-scope-id="23a2ea6b-a3ce-4cda-98c4-623e00046102" data-spwidget-scope-uri="vivian-mitchell" data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-type="OAR" data-spwidget-scope-global data-spwidget-autobind>Book a somatic healing session now</a></div>
+                <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
+                </div>
         </section>
 
         <section class="content-layout">
@@ -413,16 +424,9 @@
                 <p>So, it’s lovely to meet you! The initial start to my love for somatic work and psychology came from my own recovery from a spinal cord injury in 2013. I also have healed systemic stress for a number of individuals, but we’re out own best case studies! I used to have dysautonomia and fainting spells, and I wore glasses with a -10.50 prescription! Through my own somatic work and nervous system regulation, I now am fit, healthy, and glasses-free! Every day is a blessing, and I’m so thankful for this journey. I can’t wait to help you along yours as well :)</p>
                 <div class="contact-buttons">
                     <a href="mailto:vivianmorganmitchell@gmail.com" class="btn-outline">Email Inquiries</a>
-        
-
-        
+                    <a href="https://vivian-mitchell.clientsecure.me" target="_blank" class="btn-outline">SimplePractice Portal</a>
                 </div>
             </div>
-            <!-- Start SimplePractice Appointment-Request Widget Embed Code -->
-<style>.spwidget-button-wrapper{text-align: center}.spwidget-button{display: inline-block;padding:  6px 12px;color:  #1371C8;background:  #fff;border:  1px solid #1371C8;border-radius: 4px;font-size: 14px;font-weight: 600;text-decoration: none}.spwidget-button:hover{background:  #fff;color:  #0F5AA0}.spwidget-button:active{color: rgba(255, 255, 255, .75) !important;box-shadow: 0 1px 3px rgba(0, 0, 0, .15) inset}</style>
-<div class="spwidget-button-wrapper"><a href="https://vivian-mitchell.clientsecure.me" class="spwidget-button" data-spwidget-scope-id="23a2ea6b-a3ce-4cda-98c4-623e00046102" data-spwidget-scope-uri="vivian-mitchell" data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-type="OAR" data-spwidget-scope-global data-spwidget-autobind>Request Appointment</a></div>
-<script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
-<!-- End SimplePractice Appointment-Request Widget Embed Code -->
         </section>
 
         <section style="margin-top: 80px;">
@@ -445,7 +449,9 @@
             </ul>
 
             <h3 style="margin-top: 50px;">3. Self-Paced Digital Manuals</h3>
-            <p>Biological blueprints grounded in neuro-mechanical and metabolic principles, available seamlessly below.</p>
+            <div class="venmo-instructions">
+                <p><strong>Sold via Venmo:</strong> Turnaround time for digital delivery can be up to 24 to 48 hours. When sending payment, please explicitly include <strong>which guide you want</strong> and <strong>your email address</strong> within your Venmo note so your files can be sent directly to your inbox.</p>
+            </div>
             
             <div class="offers-grid">
                 <div class="guide-card full-bundle">
@@ -454,7 +460,7 @@
                         <div class="price-tag">$10</div>
                         <p>Acquire both foundational manuals together. This combined resource pairs structural metabolic support with targeted enteric nervous system regulation for a comprehensive approach to somatic wellness.</p>
                     </div>
-                    <a href="#" class="buy-link" style="color: var(--gold-accent);">Buy Now →</a>
+                    <a href="https://venmo.com/YOUR_USERNAME_HERE" target="_blank" class="buy-link" style="color: var(--gold-accent);">Buy Now via Venmo →</a>
                 </div>
 
                 <div class="guide-card">
@@ -463,7 +469,7 @@
                         <div class="price-tag">$7</div>
                         <p>A precise blueprint detailing optimal foods to consume and specific elements to avoid to support cellular energy, reduce systemic inflammation, and enhance vitality.</p>
                     </div>
-                    <a href="#" class="buy-link">Buy Now →</a>
+                    <a href="https://venmo.com/YOUR_USERNAME_HERE" target="_blank" class="buy-link">Buy Now via Venmo →</a>
                 </div>
 
                 <div class="guide-card">
@@ -472,7 +478,7 @@
                         <div class="price-tag">$7</div>
                         <p>A practical handbook focused on balancing the gut-brain axis, optimizing metabolic sequencing, and calming the enteric nervous system to restore true baseline stability.</p>
                     </div>
-                    <a href="#" class="buy-link">Buy Now →</a>
+                    <a href="https://venmo.com/YOUR_USERNAME_HERE" target="_blank" class="buy-link">Buy Now via Venmo →</a>
                 </div>
             </div>
         </section>
