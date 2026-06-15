@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Neuro-Mechanical Animal | Somatic Healing</title>
-    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-    <link href="[https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap](https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap)" rel="stylesheet">
     <style>
-        /* Da Vinci & Low Blue Light Structural Aesthetic */
+        /* Da Vinci & Low Blue Light Structural Aesthetic - System Font Fallbacks */
         :root {
             --bg-parchment: #eedfc4;       /* Solid golden parchment */
             --bg-dark-block: #1e1a15;      /* Structural charcoal */
@@ -28,7 +25,7 @@
         body {
             background-color: var(--bg-parchment);
             color: var(--text-dark);
-            font-family: 'Libre Baskerville', serif;
+            font-family: 'Georgia', 'Times New Roman', serif;
             line-height: 1.6;
             margin: 0;
         }
@@ -51,11 +48,11 @@
             text-decoration: none;
             border: 1px solid var(--gold-accent);
             padding: 10px 30px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Arial', 'Helvetica', sans-serif;
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-weight: 600;
+            font-weight: bold;
             transition: all 0.3s ease;
         }
 
@@ -80,14 +77,14 @@
 
         h1 {
             font-size: 3.2rem;
-            font-weight: 700;
+            font-weight: normal;
             letter-spacing: -1px;
             color: #1a1510;
             margin-bottom: 10px;
         }
 
         .subtitle {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Arial', 'Helvetica', sans-serif;
             font-style: italic;
             color: #5c4a37;
             font-size: 1.1rem;
@@ -157,11 +154,11 @@
             text-decoration: none;
             border: 1px solid var(--border-ink);
             padding: 8px 16px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Arial', 'Helvetica', sans-serif;
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            font-weight: 600;
+            font-weight: bold;
             transition: all 0.3s ease;
             background-color: rgba(255, 255, 255, 0.1);
         }
@@ -223,7 +220,7 @@
         }
 
         .meta-tags {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Arial', 'Helvetica', sans-serif;
             font-size: 0.9rem;
             color: var(--gold-glow);
             margin-bottom: 20px;
@@ -239,7 +236,7 @@
         }
 
         .btn-outline {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Arial', 'Helvetica', sans-serif;
             text-decoration: none;
             color: var(--gold-glow);
             border: 1px solid var(--gold-glow);
@@ -248,62 +245,3 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             transition: all 0.3s;
-        }
-
-        .btn-outline:hover {
-            background-color: var(--gold-glow);
-            color: var(--bg-dark-block);
-        }
-
-        /* Digital Guides Card Grid */
-        .offers-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        @media (max-width: 650px) {
-            .offers-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .guide-card {
-            border: 1px solid var(--border-ink);
-            padding: 30px;
-            background-color: rgba(255, 255, 255, 0.15);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .guide-card.full-bundle {
-            grid-column: 1 / -1;
-            border: 2px solid var(--gold-accent);
-            background-color: rgba(184, 134, 11, 0.05);
-        }
-
-        .price-tag {
-            font-size: 1.8rem;
-            color: #1a1510;
-            font-weight: 700;
-            margin: 15px 0;
-        }
-
-        .buy-link {
-            display: inline-block;
-            margin-top: 20px;
-            color: #1a1510;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1.5px;
-            text-decoration: none;
-        }
-
-        /* Rates Formatting */
-        .rates-list {
-            list-style: none;
-            margin: 20px 0 40px 0;
-        }
