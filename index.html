@@ -72,22 +72,15 @@
             padding: 60px 25px;
         }
 
-        /* Header Style Flex for Heart Branding Integration */
+        /* Header Style */
         header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
+            text-align: center;
             margin-bottom: 70px;
             padding-bottom: 30px;
             border-bottom: 1px double var(--border-ink);
         }
 
-        .header-text {
-            text-align: left;
-        }
-
-        header h1 {
+        h1 {
             font-size: 3.5rem;
             font-weight: 700;
             letter-spacing: -1px;
@@ -102,25 +95,6 @@
             font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-        }
-
-        .header-heart-branding img {
-            max-width: 140px;
-            height: auto;
-            opacity: 0.85;
-            mix-blend-mode: multiply;
-            filter: sepia(0.2);
-        }
-
-        @media (max-width: 850px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-            .header-text {
-                text-align: center;
-            }
         }
 
         /* Balanced 50/50 Desktop Layout Grid */
@@ -363,4 +337,166 @@
             color: #5c4a37;
         }
 
-        /* SimplePractice Custom Button
+        /* SimplePractice Custom Button Overrides to fit layout */
+        .spwidget-button-wrapper {
+            margin-top: 15px;
+        }
+        .spwidget-button {
+            display: inline-block !important;
+            padding: 8px 16px !important;
+            color: #1a1510 !important;
+            background: transparent !important;
+            border: 1px solid var(--border-ink) !important;
+            border-radius: 0px !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 0.75rem !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1.5px !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+        }
+        .spwidget-button:hover {
+            background-color: var(--border-ink) !important;
+            color: var(--bg-parchment) !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-nav">
+        <a href="https://vivian-mitchell.clientsecure.me" target="_blank" class="nav-btn">Book a Session with Me</a>
+    </div>
+
+    <div class="main-wrapper">
+        
+        <header>
+            <h1>The Neuro-Mechanical Animal</h1>
+            <div class="subtitle">somatic healing space and autonomic nervous system regulation</div>
+        </header>
+
+        <h2>What is “somatic healing”, anyways??</h2>
+        <p>Somatic healing is a way of working with the trauma we hold in the body. It’s a body-centered approach that bridges the gap between the mind and the physical form to resolve deep-rooted stress.</p>
+        <p style="margin-bottom: 40px;">Rather than just analyzing your experiences intellectually, we use physiological awareness to release the stored, subconscious tension that disrupts your nervous system.</p>
+
+        <section class="intro-split">
+            <div>
+                <h3>Why not talk therapy?</h3>
+                <p>Talk therapy is incredibly valuable for cognitive understanding, but you cannot talk your way out of a physical response. When we experience stress, our bodies learn to protect us by storing that energy as physical tension. The way I like to describe this is as an “internal flinch”. If someone’s been hit, what will they do the next time someone raises a fist? It’s quite likely that they’ll flinch—and something similar happens every time you experience long-term stress, though the “flinch” may not always be visible. We carry tension inside of us for years, usually unknowingly. This could look like shallow breathing resulting in a constricted diaphragm, or bracing in your connective tissue that leads to chronic pain. This type of internal tension can also lead to poor gut health, and even digestive issues!</p>
+                <p>Therapy is a useful tool, but I have more freedom to help you heal mind, body, and soul in a somatic healing space. I’ve always been a healer first, and a therapist second. :)</p>
+                <p style="margin-bottom: 50px;">Modern medicine often treats us like a bag of disassembled parts, but our brains are (and always have been) a literal part of our bodies. If you only process trauma intellectually, you leave the physical root cause untouched. Somatic work brings these unconscious physical patterns into conscious awareness, moving you from a state of chronic defensive bracing into a true flow state.</p>
+
+                <div style="border-top: 1px solid var(--border-ink); padding-top: 30px;">
+                    <h2>About the Practice: Tiers & Offers</h2>
+                    <p>All appointments are conducted virtually, customized precisely to support your unique autonomic baseline and integration capacity.</p>
+                    
+                    <h3>1. Somatic Healing and Nervous System Regulation</h3>
+                    <p>Trauma-informed, body-centered somatic sessions focused on identifying localized holding patterns, processing stored stress signatures, resolving chronic dissociation, and gently guiding the autonomic nervous system back to a grounded, resilient baseline.</p>
+                    <ul class="rates-list">
+                        <li>Initial Intake & Assessment Session (Autonomic Architecture Mapping) <span>$175</span></li>
+                        <li>Subsequent Individual Regulation Sessions <span>$125</span></li>
+                        <li>Somatic Regulation Package (5 Scheduled Sessions) <span>$500</span></li>
+                    </ul>
+
+                    <h3>2. Digestive Vitality Coaching (enteric nervous system regulation)</h3>
+                    <p>A specialized, targeted coaching track dedicated to the enteric nervous system ("the second brain") and the gut-brain axis. We focus on relaxing visceral bracing, optimizing metabolic digestive sequencing, and cultivating an internal environment that supports cellular energy and calms overall systemic inflammation.</p>
+                    <ul class="rates-list">
+                        <li>Individual Enteric Regulation & Vitality Session <span>$95</span></li>
+                        <li>Digestive Vitality 4-Session Track <span>$340</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <aside class="practitioner-sidebar">
+                    <div class="sidebar-heading">Meet the Practitioner</div>
+                    
+                    <div class="photo-frame">
+                        <img src="https://64.media.tumblr.com/11c9c27fb636f17d6a6dd83a77ff2156/cd21a8e142bf8e23-bf/s1280x1920/882cf8c9fd5b13f311d846673d472c72f07fc7c0.jpg" alt="Vivian Mitchell">
+                    </div>
+                    <h2>Vivian Mitchell, APCC #16067</h2>
+                    <div class="meta-tags">
+                        Certified Somatic Healer<br>
+                        Somatic Specialist & Autonomic Specialist (Worldwide clients accepted)<br>
+                        Virtual Psychotherapy Practice (California admissions only)
+                    </div>
+                    <p>Hi, I’m Vivian! My work in psychology and the body started in 2016, when I was a tutor for biology at my local community college. Over the last decade I’ve expanded and worked in a variety of domains–I’ve had jobs in clinical psychotherapy, social work, behavioral therapy, substance use, psychology research/fellowships, and even forensics!</p>
+                    <p>I believe everyone deserves care, and oftentimes the intersection of trauma, ADHD, ASD, LGBT identities, etc., overlap a bit more often than we think. I am dedicated to helping members of my community structurally reclaim safety and thrive.</p>
+                    <p>The initial start to my love for somatic work came from my own recovery from a spinal cord injury in 2013. I used to have dysautonomia and fainting spells, and I wore glasses with a -10.50 prescription! Through my own somatic work and nervous system regulation, I now am fit, healthy, and glasses-free!</p>
+                    <div class="contact-buttons">
+                        <a href="mailto:vivianmorganmitchell@gmail.com" class="btn-outline">Email Inquiries</a>
+                        <a href="https://vivian-mitchell.clientsecure.me" target="_blank" class="btn-outline">SimplePractice Portal</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section style="margin-top: 40px; margin-bottom: 80px; border-top: 1px double var(--border-ink); padding-top: 40px;">
+            <h3>3. Self-Paced Digital Manuals</h3>
+            <div class="venmo-instructions">
+                <p><strong>Sold via Venmo:</strong> Turnaround time for digital delivery can be up to 24 to 48 hours. When sending payment, please explicitly include <strong>which guide you want</strong> and <strong>your email address</strong> within your Venmo note so your files can be sent directly to your inbox.</p>
+            </div>
+            
+            <div class="offers-grid">
+                <div class="guide-card full-bundle">
+                    <div>
+                        <h3>The Complete Regulation Bundle</h3>
+                        <div class="price-tag">$10</div>
+                        <p>Acquire both foundational manuals together. This combined resource pairs structural metabolic support with targeted enteric nervous system regulation for a comprehensive approach to somatic wellness.</p>
+                    </div>
+                    <a href="https://www.paypal.com/qrcodes/venmocs/fb83a793-8c14-4cd4-91f4-f41ae7531dc5?created=1781558348" target="_blank" class="buy-link" style="color: var(--gold-accent);">Buy Now via Venmo →</a>
+                </div>
+
+                <div class="guide-card">
+                    <div>
+                        <h3>Mitochondrial Healing Food Guide</h3>
+                        <div class="price-tag">$7</div>
+                        <p>A precise blueprint detailing optimal foods to consume and specific elements to avoid to support cellular energy, reduce systemic inflammation, and enhance vitality.</p>
+                    </div>
+                    <a href="https://www.paypal.com/qrcodes/venmocs/fb83a793-8c14-4cd4-91f4-f41ae7531dc5?created=1781558348" target="_blank" class="buy-link">Buy Now via Venmo →</a>
+                </div>
+
+                <div class="guide-card">
+                    <div>
+                        <h3>Order of Digestion & Enteric Regulation</h3>
+                        <div class="price-tag">$7</div>
+                        <p>A master blueprint mapping out optimal culinary sequencing and bottom-up structural techniques to soothe the enteric nervous system and relieve physical gut stress.</p>
+                    </div>
+                    <a href="https://www.paypal.com/qrcodes/venmocs/fb83a793-8c14-4cd4-91f4-f41ae7531dc5?created=1781558348" target="_blank" class="buy-link">Buy Now via Venmo →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-layout">
+            <div>
+                <h2>The Neuro-Mechanical Framework</h2>
+                <p>Welcome to <strong>The Neuro-Mechanical Animal</strong>. Within this therapeutic architecture, we honor a foundational truth: the creative animal (you) is completely mediated through neuro-mechanical pathways. Every abstract thought, complex emotion, and visceral sensation exists as a bi-directional dialogue between the central nervous system and the structural body framework.</p>
+                <p>When our physiological architecture is fully regulated, life force and intentional movement move fluidly. When the system faces chronic threat, our capacity for creativity, relational safety, and presence becomes locked into survival-driven somatic patterns.</p>
+            </div>
+            <div class="sketch-side">
+                <img src="https://64.media.tumblr.com/c9025c2a1aa67d94dfa0b6bf7573a0cc/d556df64d8421053-1a/s1280x1920/732ef121ec00a0d5fb82ac4faef33a470b3ac22f.jpg" alt="Leonardo da Vinci - Structural heart mechanics study">
+                
+                <div class="spwidget-button-wrapper"><a href="https://vivian-mitchell.clientsecure.me" class="spwidget-button" data-spwidget-scope-id="23a2ea6b-a3ce-4cda-98c4-623e00046102" data-spwidget-scope-uri="vivian-mitchell" data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b" data-spwidget-type="OAR" data-spwidget-scope-global data-spwidget-autobind>Book a somatic healing session now</a></div>
+                <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
+            </div>
+        </section>
+
+        <section class="content-layout">
+            <div>
+                <h2>Somatic Healing and Nervous System Regulation</h2>
+                <p>Complex trauma, developmental stress, and high-stimulus modern environments fundamentally alter autonomic nervous system wiring. Stuck in states of high sympathetic activation (chronic fight or flight) or dorsal vagal immobilization (systemic shutdown and freeze), the body defaults into protective bracing patterns. This displays physically as altered breath cycles, neuromuscular holding habits, and lingering myofascial constriction.</p>
+                <p>Somatic healing is the targeted process of re-establishing somatic mapping and down-regulating hyper-aroused states. By working through a bottom-up framework, we safely resolve somatic dissociation—where the brain fragments away from real-time physical feedback—and rebuild neural safety, expanding your baseline resilience and capacity for regulation from the inside out.</p>
+            </div>
+            <div class="sketch-side">
+                <img src="https://64.media.tumblr.com/3fc2050107e4148d1823d33013701433/d556df64d8421053-94/s1280x1920/913bc3380e72359d1f810a721f0c81c8d9da96b8.jpg" alt="Leonardo da Vinci - Shoulder and arm muscular study">
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 The Neuro-Mechanical Animal. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
